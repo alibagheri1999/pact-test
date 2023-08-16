@@ -1,0 +1,52 @@
+{
+  "consumer": {
+    "name": "MyConsumer"
+  },
+  "interactions": [
+    {
+      "description": "a request for all userss with the builder pattern",
+      "providerStates": [
+        {
+          "name": "I have a list of users"
+        }
+      ],
+      "request": {
+        "headers": {
+          "Accept": "application/json"
+        },
+        "method": "GET",
+        "path": "/users",
+        "query": {
+          "from": [
+            "today"
+          ]
+        }
+      },
+      "response": {
+        "body": [
+          "John Doe",
+          "Jane Doe"
+        ],
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "12.1.0"
+    },
+    "pactRust": {
+      "ffi": "0.4.7",
+      "models": "1.1.9"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "MyProvider"
+  }
+}
